@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>NIRANJAN CREATIONS</title>
+</head>
+<body style="color:navy;background:linear-gradient(to left,lightpink,lightblue)">
+  <marquee behaviour="scroll" scrollamount="15" direction="right" style="color:yellow;background-color:blue;font-size:35px;"><b>FEEDBACK TO NIRANJAN</b></marquee>
+  <center>
+    <h1 style="color:green">FEEDBACK FORM</h1>
+
+    <h1>EXPLANATION OF CONTENT</h1>
+    <select id="select" style="color:lime;background-color:olive;font-size:35px;">
+      <option value="excellent">EXCELLENT</option>
+      <option value="good">GOOD</option>
+      <option value="bad">BAD</option>
+      <option value="worst">WORST</option>
+    </select>
+
+    <h1>COLORS USED FOR CONTENTS</h1>
+    <select id="color" style="color:lime;background-color:olive;font-size:35px;">
+      <option value="excellent">EXCELLENT</option>
+      <option value="good">GOOD</option>
+      <option value="bad">BAD</option>
+      <option value="worst">WORST</option>
+    </select>
+
+    <h1>PRACTICE TESTS</h1>
+    <select id="test" style="color:lime;background-color:olive;font-size:35px;">
+      <option value="excellent">EXCELLENT</option>
+      <option value="good">GOOD</option>
+      <option value="bad">BAD</option>
+      <option value="worst">WORST</option>
+    </select>
+
+    <h1>CONTENT DEPTH</h1>
+    <select id="content" style="color:lime;background-color:olive;font-size:35px;">
+      <option value="excellent">EXCELLENT</option>
+      <option value="good">GOOD</option>
+      <option value="bad">BAD</option>
+      <option value="worst">WORST</option>
+    </select>
+
+    <h1>ITS REALLY USEFUL</h1>
+    <input id="yes" name="useful" value="Yes" type="checkbox" style="width:50px;height:50px;">
+    <input id="no" name="useful" value="No" type="checkbox" style="width:50px;height:50px;position:absolute;left:620px;">
+
+    <h1>SUGGEST YOUR THOUGHTS TO IMPROVE</h1>
+    <textarea id="text" style="color:white;background-color:black;font-size:20px;height:300px;width:500px;" placeholder="please type here..."></textarea>
+    <br>
+    <button onclick="submitFeedback();" style="color:lime;background-color:blue;font-size:35px;">SUBMIT</button>
+  </center>
+
+  <audio src="https://github.com/Niranjan164/COMPILER/raw/main/click-151673_073339.mp3" id="m"></audio>
+
+  <h1 style="color:maroon;position:absolute;top:857px;left:360px;">YES</h1>
+  <h1 style="color:maroon;position:absolute;left:550px;top:857px;">NO</h1>
+
+  <script>
+    function submitFeedback() {
+      const music = document.getElementById("m");
+      music.play();
+
+      const u = localStorage.getItem("u") || "anonymous";
+      const select = document.getElementById("select").value;
+      const color = document.getElementById("color").value;
+      const test = document.getElementById("test").value;
+      const content = document.getElementById("content").value;
+      const text = document.getElementById("text").value;
+
+      let useful = "Not answered";
+      if (document.getElementById("yes").checked) useful = "Yes";
+      else if (document.getElementById("no").checked) useful = "No";
+
+      const message = `EXPLANATION: ${select}
+COLOR: ${color}
+TESTS: ${test}
+CONTENT: ${content}
+USEFUL: ${useful}
+SUGGESTION: ${text}`;
+
+      const mailBody = encodeURIComponent(message);
+      const subject = encodeURIComponent("Message from " + u+"   [python full course member]");
+
+      window.location.href = `mailto:hackerenvironment1514@gmail.com?subject=${subject}&body=${mailBody}`;
+    }
+  </script>
+</body>
+</html>
