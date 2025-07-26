@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+        <head>
+                <title>NIRANJAN CREATIONS</title>
+        </head>
+        <body style="color:navy;background:linear-gradient(to left,lightblue,lightpink)">
+                <marquee direction="right" behaviour="scroll" scrollamount="15" style="background-color:blue;color:lime;font-size:35px;">CONTACT TO NIRANJAN</marquee>
+                <center>
+                        <h1>EMAIL ID</h1>                                                                                   <h1 style="color:maroon;">hackerenvironment1514@gmail.com</h1>
+                        <textarea  id="text" style="color:white;background-color:black;height:300px;width:500px;font-size:20px;" placeholder="Enter your valide message here..."></textarea></br>
+                        <button style="color:lime;background-color:olive;font-size:35px" onclick="post();">POST HERE</button>
+                        <audio src="https://github.com/Niranjan164/COMPILER/raw/main/click-151673_073339.mp3" id="m"></audio>
+                </center>
+                <script>
+                        let music=document.getElementById("m");
+                        let u=localStorage.getItem("u");
+                        function post(){
+                                music.play();
+                                let t=document.getElementById("text").value;
+                                t=encodeURIComponent(t);
+                                window.location.href="mailto:hackerenvironment1514@gmail.com?subject=Message from "+u +"  [python full course member]&body="+t
+                        }
+                </script>
+        </body>
+</html>
