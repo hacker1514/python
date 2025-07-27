@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+        <head>
+                <title>NIRANJAN CREATIONS</title>
+        </head>
+        <body style="color:navy;background:linear-gradient(to left,lightblue,lightpink)">
+                <marquee behaviour="scroll" scrollamount="15" direction="right" style="color:lime;background-color:blue;font-size:35px;">INTRODUCTION TO PYTHON</marquee>
+                <center>
+                        <h1>READ DOCUMENT BELOW</h1>
+                        <button style="color:yellow;background-color:maroon;font-size:35px;" onclick="op();">OPEN</button>  </br>
+                        <input type="checkbox" onchange="d();">DOWNLOAD DOCUMENT TO READ OFFLINE</input>
+                        </br>
+                        <p style="color:pink;font-size:5px;">.</p>
+                        <button style="color:yellow;background-color:maroon;font-size:35px;" onclick="test();">TAKE TEST</button>
+                </center>
+                <button style="color:red;background-color:blue;font-size:35px;position:absolute;left:90px;" onclick="previous();"> < = = PREVIOUS </button>
+                <button style="color:red;background-color:blue;font-size:35px;position:absolute;right:100px;"onclick="next();">NEXT = = ></button>
+                <p style="color:pink;font-size:5px;">.</p>
+                <center>
+                <button style ="color:red;background-color:blue;font-size:35px;" onclick="home();">HOME</button>
+                </center>
+                <audio src="https://github.com/Niranjan164/COMPILER/raw/main/click-151673_073339.mp3" id="m"></audio>
+                <script>
+                        let music=document.getElementById("m");
+                        function op(){
+                                music.play();
+                                window.open("https://hacker1514.github.io/python/1.pdf","_self");
+                        }
+                        function d(){
+                                music.play();
+                                window.open("https://github.com/hacker1514/python/raw/main/1.pdf","_self");
+                                alert("Succesfully downloaded");
+                        }
+                        function previous(){
+                                music.play();
+                                window.open("https://hacker1514.github.io/python/menu.html","_self");
+                        }
+                        function next(){
+                                music.play();
+                                window.open("https://hacker1514.github.io/python/2.html","_self");
+                        }
+                        function home(){
+                                music.play();
+                                window.open("https://hacker1514.github.io/python/menu.html","_self");
+                        }
+                        let s=0,a;
+                        function test(){
+                                music.play();
+                                a=prompt("1.What is python ?\na)programing language\nb)interpreted language\nc) a and b\nd)None of the above\nEnter your option:\n");
+                                if(a=='c'){
+                                        s=s+1;}else{
+                                                alert("Answer \"c\".try next time better than this.");
+                                        }
+                                a=prompt("2.Who is father of python ?\na)Guido Van Rossum \nb)Denis Ritch \nc) a and b\nd)None of the above\nEnter your option:\n");                                                                     if(a=='a'){                                                                                                   s=s+1;}else{                                                                                                alert("Answer \"a\".try next time better than this.");                                                                                                                                          }
+                                a=prompt("3.What is syntax ?\na)programing condition\nb)interpreter condition \nc) Rules to use particular concept \nd)None of the above\nEnter your option:\n");                                                                     if(a=='c'){                                                                                                   s=s+1;}else{                                                                                                alert("Answer \"c\".try next time better than this.");                                                                                                                                          }
+                                a=prompt("4.Why python is very easy ?\na)programing language\nb)interpreted language\nc) Simple English \nd)None of the above\nEnter your option:\n");                                                                     if(a=='c'){                                                                                                   s=s+1;}else{                                                                                                alert("Answer \"c\".try next time better than this.");
+                                }
+                a = prompt("5. Write a program to print your name:");
+                 a = a.trim();
+                let l = a.length;
+
+                 if (a.startsWith('print("') && a[l - 2] == '"' && a[l - 1] == ')') {
+                                s = s + 1;
+                       } else {
+                    alert("Syntax error, no problem, we will discuss it more deeply in the next concepts.");
+                     }
+
+                            alert("You scored " +  s + "/5");
+                        }
+                </script>
+        </body>
+</html>
