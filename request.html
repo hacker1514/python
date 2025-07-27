@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+        <head>
+                <title>NIRANJAN CREATIONS</title>
+        </head>
+        <body style="color:navy;background:linear-gradient(to left,lightblue,lightpink)">
+                <marquee style="background-color:blue;color:red;font-size:35px;" behaviour="scroll" scrollamount="15" direction="right">PASSWORD REQUESTING TO NIRANJAN</marquee>
+                <center>
+                        <h1>REQUEST HERE</h1>
+                        <button onclick="f();" style="color:yellow;background-color:maroon;font-size:35px;">SEND</button>
+                        <pre style="color:lime;background-color:black;font-size:35px;" id="text">REQUEST NOT SENT</pre>
+                        <audio src="https://github.com/Niranjan164/COMPILER/raw/main/click-151673_073339.mp3" id="m"></audio>
+                        <button style="color:lime;background-color:navy;font-size:35px;" onclick="r();">RESET ALL</button>
+                </center>
+                <script>
+                        let music=document.getElementById("m");
+                        let u=localStorage.getItem("u");
+                        let p=localStorage.getItem("p");
+                        let text;
+                        function f(){
+                                music.play();
+                                if(u!=null && p!=null){
+                                text="USERNAME : "+u+"\nPASSWORD : "+p;
+                                }else{
+                                  text="LOGIN DETAILS NOT FOUND\nPLEASE CREATE ACCOUNT";
+                                }
+                                document.getElementById("text").innerText=text;
+                        }
+                        function r(){
+                                music.play();
+                              u=prompt("Enter New user name:\n")
+                          localStorage.setItem("u",u);
+                            p=prompt("Enter New Password:\n")
+                          localstorage.setItem("p",p);
+                                alert("Succesfully created new login details please check once\n");
+                        }
+                </script>
+        </body>
+</html>
