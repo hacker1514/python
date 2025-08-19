@@ -1,6 +1,6 @@
 {
- "name":"INTREPTER",
- "short_name":"INTREPTER",
+ "name":"INTERPRETER",
+ "short_name":"INTERPRETER",
  "display":"fullscreen",
  "start_url":"./Intrepter.html",
  "background_color":"#000000",
