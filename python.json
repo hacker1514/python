@@ -2,7 +2,7 @@
  "name":"INTREPTER",
  "short_name":"INTREPTER",
  "display":"fullscreen",
- "start_url":"./python.html",
+ "start_url":"./Intrepter.html",
  "background_color":"#000000",
  "theme_color":"#000000",
  "icons": [
