@@ -2,6 +2,7 @@
 <html>
         <head>
                 <title>NIRANJAN CREATIONS</title>
+                <link rel="manifest" href="python.json">
                 <script src="https://cdn.jsdelivr.net/npm/skulpt@1.2.0/dist/skulpt.min.js"></script>                           <script src="https://cdn.jsdelivr.net/npm/skulpt@1.2.0/dist/skulpt-stdlib.js"></script>
         </head>
         <body style="background:linear-gradient(to left,lightpink,lightblue);color:navy;">
@@ -34,9 +35,10 @@
 <button style="border:solid blue;color:lime;background-color:teal;font-size:30px;" onclick="save();">SAVE</button>
 <button style="border:solid black;color:lime;background-color:teal;font-size:30px;" onclick="r();">REFRESH</button>
 <button style="border:solid yellow;color:lime;background-color:teal;font-size:30px;" onclick="runPython();">RUN</button>
+<button style="border:solid red;color:lime;background-color:teal;font-size:30px;" onclick="install();">INSTALL</button>
 </br></br>
 <audio src="https://github.com/Niranjan164/COMPILER/raw/main/click-151673_073339.mp3" id="m"></audio>
-<textarea id="code" style="color:red;background-color:black;font-size:25px;width:900px;height:400px;border:solid cyan;" autocapitatize='off'>
+<textarea id="code" style="color:red;background-color:black;font-size:25px;width:900px;height:400px;border:solid cyan;" autocapitalize='off'>
 print("HELLO PYTHON PROGRAMMERS !\n ALL THE BEST FOR YOUR PYTHON LEARNING.")
 
 #continue your programs by clearing default code.
@@ -45,6 +47,20 @@ print("HELLO PYTHON PROGRAMMERS !\n ALL THE BEST FOR YOUR PYTHON LEARNING.")
 <pre id="output" style="background-color:black;color:lime;font-size:25px;width:900px;"></pre>
 
 <script>
+        let p;
+        window.addEventListener('beforeinstallprompt',e=>{
+                e.preventDefault();
+                p=e;
+        });
+        function install(){
+                music.play();
+                if(p){
+                        p.prompt();
+                }
+        }
+        if('serviceWorker' in navigator){
+        navigator.serviceWorker.register('python.js');
+        }
         let music=document.getElementById("m");
 function builtinRead(x) {
     if (!Sk.builtinFiles || !Sk.builtinFiles["files"][x]) throw "File not found: " + x;
